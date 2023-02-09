@@ -36,4 +36,19 @@ Security Group
 EC2 access
 -SSH to the box
 -EC2 instance connect only amazon linux 2
+-Elastic IP is static public IP.It s limited to 5 per account
+-Not a great practice to use elastic IP.use DNS instead
+-SSH uses public IP for EC2 instance connect
+-Placement group (cluster,spread,partition)
+-Big Data Job uses cluster placement group 
+-Spread placement group 7 per AZ
+-Hadoop,Cassandra,Kafka uses partition
+-ENI provides Private IP Address,Elastic IP Address,MAC Address.It can be attached or detached to Ec2.used in fail over scenarios
+-EC2 hibernate Usecases like long running processes,preserve EBS volume 
+-EC2 hibernate no more than 60 days.It should have root EBS volume
+
+
+
+
+
 
