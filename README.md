@@ -46,6 +46,14 @@ EC2 access
 -ENI provides Private IP Address,Elastic IP Address,MAC Address.It can be attached or detached to Ec2.used in fail over scenarios
 -EC2 hibernate Usecases like long running processes,preserve EBS volume 
 -EC2 hibernate no more than 60 days.It should have root EBS volume
+-EBS volume is a network drive.Its locked to AZ.To move volume across AZ snapshot should be taken
+-root EBS volume deleted on termination by default other EBS volumes are not
+-EBS Snapshot Archive moves snapshot to archive tier
+-Recycle bin helps setting up rules to restore deleted snapshots from 1 day to 1 year
+-Fastest Snapshot Restore no latency
+-AMI amazon machine image can be public,custom and market place
+-EC2 instance store provides high performance but they are temporary i3 series 100124 random read IOPS and 35000 write IOPS
+
 
 
 
