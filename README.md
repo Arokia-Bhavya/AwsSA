@@ -54,6 +54,13 @@ version,statement(effect,action,resource,principal)
 - AMI amazon machine image can be public,custom and market place
 - EC2 instance store provides high performance but they are temporary i3 series 100124 random read IOPS and 35000 write IOPS
 
+# LoadBalancing
+- Servers that forward traffic to multiple EC2 instance
+- Classic Load Balancer (v1 old generation) support HTTP,HTTPS,TCP,SSL(Secure TCP)
+- Application Load Balancer (v2 new generation) support HTTP,HTTPS,Websocket
+- Network Load Balancer (v2 new generation) support TCP,TLS,UDP
+- Gateway LoadBalancer Network layer IP Protocol
+
 
 
 
