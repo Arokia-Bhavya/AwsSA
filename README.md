@@ -25,7 +25,7 @@ version,statement(effect,action,resource,principal)
 - General,Compute Optimized,Memory Optimized
 - https://instances.vantage.sh/
 
-### Security Group
+##### Security Group
 - region specific
 - they act as firewall to Ec2 instances
 - If application gets timed out,security group issue
@@ -33,7 +33,7 @@ version,statement(effect,action,resource,principal)
 - All inbound traffic are blocked by default
 - All outbound traffic are allowed
 
-### EC2 access
+##### EC2 access
 - SSH to the box
 - EC2 instance connect only amazon linux 2
 - Elastic IP is static public IP.It s limited to 5 per account
