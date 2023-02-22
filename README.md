@@ -60,6 +60,18 @@ version,statement(effect,action,resource,principal)
 - Application Load Balancer (v2 new generation) support HTTP,HTTPS,Websocket
 - Network Load Balancer (v2 new generation) support TCP,TLS,UDP
 - Gateway LoadBalancer Network layer IP Protocol
+## Application Load Balancer
+- It s layery7 loadbalancer supporting HTTP & HTTPS
+- Routing based on URL,hostname and query string
+- great fit for microservices (container based ECS because of port mapping)
+- Target groups are EC2 instances with ASG,ECS tasks,lambda functions
+- Client's details can be obtained from headers like x-forwarded-for,x-forwarded-port,x-forwarded-proto
+## Network Load Balancer
+- Layer 4 load balancer
+- TCP,UDP traffic to your instances
+- handle millions of request with low latency
+- supports static IP
+
 
 
 
