@@ -96,6 +96,21 @@ version,statement(effect,action,resource,principal)
 - CPU utilization,RequestCountPerTarget,Average network in/out,any custom metric
 - default cool down period is 300s,ASG will not launch or terminate additional instances
 
+# Instantiating the applications quickly
+- Use Golden AMI for Ec2 instances and user data scripts for dynamic configurations
+- Use both golden AMI and bootstrap data for elastic bean stalk
+- Restore snapshot for RDS instances
+- Restore snapshot for EBS
+
+## Elastic Bean Stalk
+- Components are configuration,version,environments
+- create app->upload version->launch enviornment
+- Supported platforms are Go,Java,.Net,Node js,PHP,Python,Ruby,Packet builder,Single,Multi docker,Preconfigured
+- Webserver tier includes ALB,ASG
+- Worker tier ALB,ASG,SQS
+
+
+
 
 
 
