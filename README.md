@@ -54,24 +54,24 @@ version,statement(effect,action,resource,principal)
 - AMI amazon machine image can be public,custom and market place
 - EC2 instance store provides high performance but they are temporary i3 series 100124 random read IOPS and 35000 write IOPS
 
-# LoadBalancing
+## LoadBalancing
 - Servers that forward traffic to multiple EC2 instance
 - Classic Load Balancer (v1 old generation) support HTTP,HTTPS,TCP,SSL(Secure TCP)
 - Application Load Balancer (v2 new generation) support HTTP,HTTPS,Websocket
 - Network Load Balancer (v2 new generation) support TCP,TLS,UDP
 - Gateway LoadBalancer Network layer IP Protocol
-## Application Load Balancer
+### Application Load Balancer
 - It s layery7 loadbalancer supporting HTTP & HTTPS
 - Routing based on URL,hostname and query string
 - great fit for microservices (container based ECS because of port mapping)
 - Target groups are EC2 instances with ASG,ECS tasks,lambda functions
 - Client's details can be obtained from headers like x-forwarded-for,x-forwarded-port,x-forwarded-proto
-## Network Load Balancer
+### Network Load Balancer
 - Layer 4 load balancer
 - TCP,UDP traffic to your instances
 - handle millions of request with low latency
 - supports static IP
-## Gateway Load Balancer
+### Gateway Load Balancer
 - Deploy,scale 3rd party network virtual appliances
 - example firewall,intrusion detection and prevention system,deep packet inspection systems,payload manipulation
 - tansparent network gateway and load balancer
@@ -89,14 +89,14 @@ version,statement(effect,action,resource,principal)
 - Connection draining for CLB and deregistering delay for ALB,NLB
 - default 300s between 1 to 3600s
 
-# AutoScaling Group
+## AutoScaling Group
 - Scale out,Scale in,automatic registering and dregistering from loadbalancer
 - Launch template containing AMI + instance type,EC2 user data,EBS vloumes,security group,ssh key pair,IAM roles,network subnet info and load balancer
 - Target tracking,simple step up scaling policy,scheduled actions,Predictive scaling
 - CPU utilization,RequestCountPerTarget,Average network in/out,any custom metric
 - default cool down period is 300s,ASG will not launch or terminate additional instances
 
-# Instantiating the applications quickly
+## Instantiating the applications quickly
 - Use Golden AMI for Ec2 instances and user data scripts for dynamic configurations
 - Use both golden AMI and bootstrap data for elastic bean stalk
 - Restore snapshot for RDS instances
@@ -108,7 +108,7 @@ version,statement(effect,action,resource,principal)
 - Supported platforms are Go,Java,.Net,Node js,PHP,Python,Ruby,Packet builder,Single,Multi docker,Preconfigured
 - Webserver tier includes ALB,ASG
 - Worker tier ALB,ASG,SQS
-
+## RDS (Relational database service)
 
 
 
