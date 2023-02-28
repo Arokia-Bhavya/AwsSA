@@ -109,6 +109,9 @@ version,statement(effect,action,resource,principal)
 - Webserver tier includes ALB,ASG
 - Worker tier ALB,ASG,SQS
 ## RDS (Relational database service)
+- Managed service with automated provisioning,OS patching,continous backup,read replica,multi AZ setup,scaling and EBS storage.we cannot SSH
+- RDS engines are mariadb,mysql,oracle,postgres,SQL server
+- 
 
 
 
