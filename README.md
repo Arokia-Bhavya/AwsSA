@@ -111,7 +111,34 @@ version,statement(effect,action,resource,principal)
 ## RDS (Relational database service)
 - Managed service with automated provisioning,OS patching,continous backup,read replica,multi AZ setup,scaling and EBS storage.we cannot SSH
 - RDS engines are mariadb,mysql,oracle,postgres,SQL server
-- 
+- Read replicas are limited to 5.within AZ,cross AZ or region
+- Replcation is async
+- Replcas can be promoted to main
+- Applications update connection string for read replicas
+- Use cases are where read workload should not affect the regular workload
+- Same region replication traffic is free whereas cross region is payable
+- RDS multi AZ provides Disaster Recovery
+- one DNS name automatic app failover to standby
+- read replicas be setup as multi AZ for diasaster recovery
+- 0 downtime from single to multi AZ.Internally snapshot is taken,new DB is restored from snapshot in new AZ and finally sync between the dbs
+- Database authentication are of 3 types.they are password authentication,IAM database authentication and Kerberos authentication
+- RDS custom for Microsoft SQL server and oracle access to underlying OS,can do SSH access
+### Amazon Aurora 
+### Elasticache
+- Managed redis or memcached
+- in memory databases with low latency and high performance
+- reduce load off of databases of read intensive workloads
+- helps make your application stateless
+- using elasticache needs heavy application code changes
+- Acts as db cache code changes for cache hit,cache write and invalidation 
+- Acts as user session store
+- Rediscache has multi AZ,read replicas have high availability,back and restore just like RDS underlying concept set and sorted set
+- MemCached has multi node for partitioning of data,No high availability,non persistent,No backup and restore, underlying concept is sharding
+- IAM authentication for Redis only.Redis auth includes password token and inflight SSL encryption 
+- Memcached uses SASL
+- Lazy loading,Write through and session store(TTL)
+- Redis sorted sets provides both uniqueness and ordering.usecase is gaming leaderboard
+
 
 
 
