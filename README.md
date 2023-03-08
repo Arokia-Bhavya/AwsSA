@@ -124,6 +124,11 @@ version,statement(effect,action,resource,principal)
 - Database authentication are of 3 types.they are password authentication,IAM database authentication and Kerberos authentication
 - RDS custom for Microsoft SQL server and oracle access to underlying OS,can do SSH access
 ### Amazon Aurora 
+- proprietary technology and compatible drivers 
+- aws cloud optimized 5X performance improvement over MySQL 3x performance improvement over postgres
+- It s 20% cost more and has features High availability,15 replicas
+- 
+
 ### Elasticache
 - Managed redis or memcached
 - in memory databases with low latency and high performance
@@ -138,6 +143,7 @@ version,statement(effect,action,resource,principal)
 - Memcached uses SASL
 - Lazy loading,Write through and session store(TTL)
 - Redis sorted sets provides both uniqueness and ordering.usecase is gaming leaderboard
+-
 
 
 
