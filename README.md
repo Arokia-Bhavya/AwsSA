@@ -144,7 +144,13 @@ version,statement(effect,action,resource,principal)
 - Lazy loading,Write through and session store(TTL)
 - Redis sorted sets provides both uniqueness and ordering.usecase is gaming leaderboard
 -
-
+## S3
+- Storage,archive,Application hosting,media hosting,diaster recovery,data lakes,analytics
+- S3 stores files in buckets.Files are called objects
+- Bucket name should be globally unique name.It should not have uppercase,underscore.It is 3 - 63 characters long.not an ip.must not start with prefix xn.must not send with suffix s3alias.
+- Objects have key.The key is entire path.no concepts of directories within buckets 
+- Max file size 5TB .Files greater than 5 GB should use multipart upload
+- 
 
 
 
