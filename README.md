@@ -152,6 +152,14 @@ version,statement(effect,action,resource,principal)
 - Max file size 5TB .Files greater than 5 GB should use multipart upload
 - 
 
+## Lambda
+- virtual functions
+- It supports nost languages like java,nodejs,python,go lang
+- lambda container image
+- 1 million requests are free and it s charged 0.02$ per request there after
+- 400,000 GB-seconds compute time per month free and charged 1$
+- 
+
 
 
 
