@@ -158,7 +158,24 @@ version,statement(effect,action,resource,principal)
 - lambda container image
 - 1 million requests are free and it s charged 0.02$ per request there after
 - 400,000 GB-seconds compute time per month free and charged 1$
-- 
+
+
+## Machine Learning
+- Rekognition helps in image regonition,labelling
+- Transcribe converts speech to text.features like automatic speech recognition,redaction(removess PII info),automatic language audio
+- Polly converts text to speech.features like pronunciation lexicons and speech synthesis Markup language enables more customization
+- Translate helps in translating from one language to another
+- lex widely used in alexa.helps in automatic speech recognition,building chatbots
+- connect is used in contact centres.recieve calls,contact flows.virtual call center
+- comprehend is NLP based fully managed serverless service.analyse customer mails and create group articles
+- comprehend medical that extracts clinical information
+- sagemaker is to develop ML models
+- Kendra is ML based document search engine 
+- Personalize fully managed ML service with real time recommendations
+- textract extracts text,handwriting,data from scanned documents
+- forcasts fully managed service to provide highly accurate forecast.usecases like financial planning,product planning,resource planning
+
+
 
 
 
