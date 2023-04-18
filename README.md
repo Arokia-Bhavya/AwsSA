@@ -159,6 +159,11 @@ version,statement(effect,action,resource,principal)
 - 1 million requests are free and it s charged 0.02$ per request there after
 - 400,000 GB-seconds compute time per month free and charged 1$
 
+## Databases
+- RDS supports RDBMS usecases are perform sql queries,transactions
+- Aurora has modules like aurora serverless,aurora multi master,aurora global,aurora machine learning,aurora db cloning
+- elasticache manged redis,memcached.requires code changes at application level.usecases are Key/value store,Frequent reads,less writes,cache results for dbqueries,store session data for websites,cannot use SQL
+- Dynamodb is managed Nosql databse,DAX cluster for read cache,usecases small documents 100KB 
 
 ## Machine Learning
 - Rekognition helps in image regonition,labelling
