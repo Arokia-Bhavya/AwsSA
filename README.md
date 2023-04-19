@@ -163,7 +163,12 @@ version,statement(effect,action,resource,principal)
 - RDS supports RDBMS usecases are perform sql queries,transactions
 - Aurora has modules like aurora serverless,aurora multi master,aurora global,aurora machine learning,aurora db cloning
 - elasticache manged redis,memcached.requires code changes at application level.usecases are Key/value store,Frequent reads,less writes,cache results for dbqueries,store session data for websites,cannot use SQL
-- Dynamodb is managed Nosql databse,DAX cluster for read cache,usecases small documents 100KB 
+- Dynamodb is managed Nosql databse,DAX cluster for read cache,usecases small documents 100KB
+- Neptune graph dataset usecase social media 
+- DocumentDB aws managed mongodb 
+- keyspaces aws managed cassandra
+- QLDB qudric ledger financial transactions DB.records are immutable.decentralized 
+- Timestream timeseries database 
 
 ## Machine Learning
 - Rekognition helps in image regonition,labelling
