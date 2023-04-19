@@ -159,6 +159,18 @@ version,statement(effect,action,resource,principal)
 - 1 million requests are free and it s charged 0.02$ per request there after
 - 400,000 GB-seconds compute time per month free and charged 1$
 
+## Other serverless 
+- API gateway HTTP,rest and websocket types
+- API gateway edge optimized,regional and private
+- Authentication using IAM roles,cognito
+- custom domain name HTTPS using ACM and R53 record
+- Step functions build serverless visual workflows to orchestrate lambda functions
+- possibility of human intervention.usecases are order fulfilment,data processing,web applications,
+- Cognito give users an identity to interact with web and mobile
+- Cognito User pools integrate with API GW and ALB.Its a serverless database with username & password.It can be integrated with federated identities (facebook,google)
+- Cognito Identity pools users gets temporary AWS credentials
+
+
 ## Databases
 - RDS supports RDBMS usecases are perform sql queries,transactions
 - Aurora has modules like aurora serverless,aurora multi master,aurora global,aurora machine learning,aurora db cloning
