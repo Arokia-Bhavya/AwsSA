@@ -159,6 +159,11 @@ version,statement(effect,action,resource,principal)
 - 1 million requests are free and it s charged 0.02$ per request there after
 - 400,000 GB-seconds compute time per month free and charged 1$
 - lambda execution time limit 15 mins,memory limit 128 MB to 10GB
+- environment variables should be of 4KB
+- concurrency executions are 1000 can be increased if requested
+- cloudfront functions in js and lambda @ edge available in other langauages
+- cloudfront functions s free and exection time < 1ms ,usecase cache customizaton,url rewrites
+- rds proxy for maintaining pool of functions for lambdas to access rds
 
 
 ## Dynamodb
