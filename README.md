@@ -158,10 +158,17 @@ version,statement(effect,action,resource,principal)
 - lambda container image
 - 1 million requests are free and it s charged 0.02$ per request there after
 - 400,000 GB-seconds compute time per month free and charged 1$
+- lambda execution time limit 15 mins,memory limit 128 MB to 10GB
+
 
 ## Dynamodb
 - DAX helps read congestion by caching.no application code changes required
-- 
+- Dynamo db streams cross region replication and global table
+- kinesis data streams are newer.in this case kinesis fire house
+- TTL time to live automatically deletes after expiry
+- Continous backups(35 days) and On demand backups will available
+- export to s3 works for point in time recovery
+
 
 ## Other serverless 
 - API gateway HTTP,rest and websocket types
