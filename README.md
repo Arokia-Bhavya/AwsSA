@@ -159,6 +159,10 @@ version,statement(effect,action,resource,principal)
 - 1 million requests are free and it s charged 0.02$ per request there after
 - 400,000 GB-seconds compute time per month free and charged 1$
 
+## Dynamodb
+- DAX helps read congestion by caching.no application code changes required
+- 
+
 ## Other serverless 
 - API gateway HTTP,rest and websocket types
 - API gateway edge optimized,regional and private
