@@ -203,8 +203,10 @@ version,statement(effect,action,resource,principal)
 - redshift is based on postgreSQL.Has indexes .faster queries and results
 - redshift supports multi AZ mode.Cluster snapshots can be taken from region and copied to another
 - Data can be loaded using kinesis firre house,from s3,using Ec2 instance
-- Opensearch successor of elastisearch.can search data across columns irrespective of primary key.dynamo db streams can be sent to opensearch
-- 
+- Opensearch successor of elastisearch.can search data across columns irrespective of primary key.
+- Open search patterns using dynamodb streams,kinesis data streams & kinesis firhouse
+- EMR helps to create hadoop clusters.comes with apache spark,flink,hbase,presto
+
 
 ## Machine Learning
 - Rekognition helps in image regonition,labelling
