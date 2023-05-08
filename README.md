@@ -198,6 +198,14 @@ version,statement(effect,action,resource,principal)
 - QLDB qudric ledger financial transactions DB.records are immutable.decentralized 
 - Timestream timeseries database 
 
+## Data & Analytics
+- Athena is serverless query engine on columnar data
+- redshift is based on postgreSQL.Has indexes .faster queries and results
+- redshift supports multi AZ mode.Cluster snapshots can be taken from region and copied to another
+- Data can be loaded using kinesis firre house,from s3,using Ec2 instance
+- Opensearch successor of elastisearch.can search data across columns irrespective of primary key.dynamo db streams can be sent to opensearch
+- 
+
 ## Machine Learning
 - Rekognition helps in image regonition,labelling
 - Transcribe converts speech to text.features like automatic speech recognition,redaction(removess PII info),automatic language audio
