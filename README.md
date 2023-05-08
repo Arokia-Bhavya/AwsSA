@@ -206,6 +206,17 @@ version,statement(effect,action,resource,principal)
 - Opensearch successor of elastisearch.can search data across columns irrespective of primary key.
 - Open search patterns using dynamodb streams,kinesis data streams & kinesis firhouse
 - EMR helps to create hadoop clusters.comes with apache spark,flink,hbase,presto
+- Quicksight is ML based BI service providing dashboard
+- Glue is serverless ETL service.convert data to parquet format
+- Glue data catalog run datalog crawlers to get data from various data sources 
+- Glue job bookmarks prevents from reprocessing
+- Glue Studio provides GUI
+- Glue elastic views leverages materialized view
+- Glue databrew clean and normalize data 
+- aws lake central place of data for analysis.built on top of glue
+- Flink application in java,scala to process and analyze data.read MSK and kinesis data streams
+- kafka is alternative for kinesis.MSK fully manages kafka.has serverless version too
+
 
 
 ## Machine Learning
