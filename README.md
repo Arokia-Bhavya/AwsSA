@@ -108,6 +108,14 @@ version,statement(effect,action,resource,principal)
 - Supported platforms are Go,Java,.Net,Node js,PHP,Python,Ruby,Packet builder,Single,Multi docker,Preconfigured
 - Webserver tier includes ALB,ASG
 - Worker tier ALB,ASG,SQS
+
+## ECS,EKS and Fargate
+- Docker is a platform using which we can deploy apps
+- Building docker creates docker image which can be stored in public repo called docker hub or private hub called elastic container registry
+- VMs run on hypervisor whereas dockers run on docker daemon.containers share networking
+- ECS data vloumes is EFS
+- While creating ECS cluster 3 options like fargate,EC2 instances,external instances using ECS anywhere
+- 
 ## RDS (Relational database service)
 - Managed service with automated provisioning,OS patching,continous backup,read replica,multi AZ setup,scaling and EBS storage.we cannot SSH
 - RDS engines are mariadb,mysql,oracle,postgres,SQL server
