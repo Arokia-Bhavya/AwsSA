@@ -111,11 +111,18 @@ version,statement(effect,action,resource,principal)
 
 ## ECS,EKS and Fargate
 - Docker is a platform using which we can deploy apps
-- Building docker creates docker image which can be stored in public repo called docker hub or private hub called elastic container registry
+- Building docker creates docker image which can be stored in public repo called docker hub or private hub called elastic container registry(ECR has public gallery)
 - VMs run on hypervisor whereas dockers run on docker daemon.containers share networking
 - ECS data vloumes is EFS
 - While creating ECS cluster 3 options like fargate,EC2 instances,external instances using ECS anywhere
-- 
+- ECS service to run and maintain a specified number of instances of a task definition simultaneously in an Amazon ECS cluster
+- For automatic scaling we can use ECS service average CPU utilization,ECS service memory utilization,ALB request count per target
+- architectures example ECS with eventbridge & SQS
+- EKS supports 2 launch modes Fargate and EC2.kubernetes is cloud agnostic
+- EKS Pods in worker nodes.
+- Managed node groups & self managed node groups(prebuild AMI)
+- AWS AppRunner fully managed service to deploy web apps
+
 ## RDS (Relational database service)
 - Managed service with automated provisioning,OS patching,continous backup,read replica,multi AZ setup,scaling and EBS storage.we cannot SSH
 - RDS engines are mariadb,mysql,oracle,postgres,SQL server
