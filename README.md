@@ -109,6 +109,20 @@ version,statement(effect,action,resource,principal)
 - Webserver tier includes ALB,ASG
 - Worker tier ALB,ASG,SQS
 
+## Messaging
+- SQS queue model,SNS Pub Sub,Kinesis real time streaming model
+- SQS aws oldest offering used to decouple applications
+- retention of messages 4 to 14 days.message size 256 Kb.low latency < 10 ms
+- can have duplicate messages and out of order messages.unlimted throughput
+- consumers can run on ec2 instances,lambda
+- consumers once done with processing the message and delete them.consumers can be integrated with ASG based on queue length cloud watch metric
+- inflight encryption using HTTPS and at REST encryption using KMS keys
+- Access policy for SQS s there similar to S3
+- dead-letter queue (DLQ) is a special type of message queue that temporarily stores messages that a software system cannot process due to errors
+- message visibility timeout makes the message invisible for the consumers to recieve.visbility timeout too low leads to duplicates.visibility timeout too high its difficult to reprocess
+- Long polling s where consumer waits even when there are no messages in the queue.can be enabled at queue level or API level using waittimeseconds
+- FIFO queue limited throughput 300 msg/s without batching 3000 msgs with batching.exactly once send capbility.ordering of msgs maintained
+
 ## ECS,EKS and Fargate
 - Docker is a platform using which we can deploy apps
 - Building docker creates docker image which can be stored in public repo called docker hub or private hub called elastic container registry(ECR has public gallery)
