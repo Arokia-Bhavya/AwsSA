@@ -127,6 +127,15 @@ version,statement(effect,action,resource,principal)
 - SNS securtiy inflight encryption using HTTPS api and at rest encryption using KMS keys
 - SNS + muliple SQS queues,SNS + Kinesis Data Firehouse, .subscription based on Message filtering 
 - Apps using RabbitMQ and ActiveMQ can be migrated to AWS using Amazon MQ.traditional protocols like AMQP.not scalable like SQS or SNS 
+- Kinesis data streams uses shard based.messages having same partition key goes to same shard
+- retention is 1 to 365 days.message once inserted cannot be deleted
+- for producers we can use sdk,kinesis producer library and kinesis agent
+- for consumers we can use sdk,kinesis client library and kinesis agent
+- provisioned mode and on demand mode
+- kinesis data for house can streams data to S2,redshift,opensearch.fully managed.near realtime
+- for ordering partition key in kinesis and group id in FIFO
+- 20 trucks per shard.max amount of consumers in parallel is 5
+- FIFO queue uses max 100 group id
 
 ## ECS,EKS and Fargate
 - Docker is a platform using which we can deploy apps
