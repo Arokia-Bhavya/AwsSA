@@ -122,6 +122,11 @@ version,statement(effect,action,resource,principal)
 - message visibility timeout makes the message invisible for the consumers to recieve.visbility timeout too low leads to duplicates.visibility timeout too high its difficult to reprocess
 - Long polling s where consumer waits even when there are no messages in the queue.can be enabled at queue level or API level using waittimeseconds
 - FIFO queue limited throughput 300 msg/s without batching 3000 msgs with batching.exactly once send capbility.ordering of msgs maintained
+- SNS one message multiple recievers.SNS FIFO topic only SQS subscription wheres standard topic supports other subscription protocols like SQS,lambda,mobile app,HTTP,SMS,EMail
+- Topic publish API create a topic,subscription and publish to the topic.direct publish for mobile apps
+- SNS securtiy inflight encryption using HTTPS api and at rest encryption using KMS keys
+- SNS + muliple SQS queues,SNS + Kinesis Data Firehouse, .subscription based on Message filtering 
+- Apps using RabbitMQ and ActiveMQ can be migrated to AWS using Amazon MQ.traditional protocols like AMQP.not scalable like SQS or SNS 
 
 ## ECS,EKS and Fargate
 - Docker is a platform using which we can deploy apps
