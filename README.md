@@ -198,6 +198,20 @@ version,statement(effect,action,resource,principal)
 - Bucket policy are json based and has the same syntax as IAM policy
 - Bucket settings are enabled for preventing data leaks
 - we can host static website using S3.enabling static website host will ask you to create index.html and all the bucket contents as public
+- versioning of the files is at bucket level.Any file that is not versioned prior to enabling version will be have version as null
+- Delete just adds delete marker only when permanently delete the object gets deleted
+- Replication are of 2 types cross region replication and same region replication.Versioning has to be enabled as copying s done async
+- After replication,only new objects gets replicated,for existing it s S3 batch replication
+- replication can replicate only delete marker not permanently delete
+- S3 standard used for frequent access 
+- S3 standard IA is for infrequent access cost less than standard.use case Diaster Recover and backup.minimum storage 30 days
+- S3 one zone IA infrequent storing secondary backup.minimum storage 30 days
+- S3 Glacier low cost storage for archiving 
+- S3 Glacier instant retrieval is for ms retrievalminimum storage 90 days
+- S3 Glacier Flexible retrieval expedited ( 1 to 5 mins),standard(3 to 5 hrs),bulk(5 to 12hrs).minimum storage 90 days
+- S3 Glacier Deep archive for long term storage.standard(12 hrs) bulk (48 hrs).minimum storage 180 days
+- S3 intelligent tiering moves objects based on usage
+- S3 lifecycle are rules that helps to move objects between storage classes based on configured conditions
 
 ## Lambda
 - virtual functions
