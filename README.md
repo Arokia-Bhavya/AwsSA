@@ -193,7 +193,11 @@ version,statement(effect,action,resource,principal)
 - Bucket name should be globally unique name.It should not have uppercase,underscore.It is 3 - 63 characters long.not an ip.must not start with prefix xn.must not send with suffix s3alias.
 - Objects have key.The key is entire path.no concepts of directories within buckets 
 - Max file size 5TB .Files greater than 5 GB should use multipart upload
-- 
+- User based policy IAM
+- Resource based policy - bucket policy,object access control,bucket access control
+- Bucket policy are json based and has the same syntax as IAM policy
+- Bucket settings are enabled for preventing data leaks
+- we can host static website using S3.enabling static website host will ask you to create index.html and all the bucket contents as public
 
 ## Lambda
 - virtual functions
