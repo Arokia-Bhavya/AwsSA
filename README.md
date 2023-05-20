@@ -212,6 +212,16 @@ version,statement(effect,action,resource,principal)
 - S3 Glacier Deep archive for long term storage.standard(12 hrs) bulk (48 hrs).minimum storage 180 days
 - S3 intelligent tiering moves objects based on usage
 - S3 lifecycle are rules that helps to move objects between storage classes based on configured conditions
+- Transition actions are rules for moving and expiration actions are rules for deletion.u can give both current and non current versions
+- S3 analytics for analysing the storage class usage with suggestions
+- S3 requester pays networking cost.requester must be IAM user so that billed accordingly
+- S3 event notifications need IAM persmissions
+- S3 event notifications with event bridge helps to send notifications to many
+- S3 transfer accleration uses edge locations to speed up transfer upload.compatible with multipart
+- S3 byte range fetches can be used to increase downloads.can be used in retrieving partial data
+- S3 select and Glacier select retrieves less data using SQL 
+- S3 batch operations have numerous usecases like encyrpt unencrypted objects
+- S3 inventory to get object listand use S3 to filter
 
 ## Lambda
 - virtual functions
