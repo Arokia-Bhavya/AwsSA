@@ -305,6 +305,11 @@ version,statement(effect,action,resource,principal)
 - textract extracts text,handwriting,data from scanned documents
 - forcasts fully managed service to provide highly accurate forecast.usecases like financial planning,product planning,resource planning
 
+## White Papers
+- 6 pillars are operational excellence,security,reliability,performance effiency,cost optimization and sustainability
+- AWS Well-Architected Tool (AWS WA Tool) is a service in the cloud that provides a consistent process for measuring your architecture using AWS best practices.
+- In addition to AWS best practices, you can use custom lenses to measure your workload using your own best practices.
+
 
 
 
