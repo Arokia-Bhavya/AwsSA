@@ -222,6 +222,12 @@ version,statement(effect,action,resource,principal)
 - S3 select and Glacier select retrieves less data using SQL 
 - S3 batch operations have numerous usecases like encyrpt unencrypted objects
 - S3 inventory to get object listand use S3 to filter
+- S3 encryption has 4 types namely SSE-S3,SSE-KMS,SSE-C and client side encryption
+- SSE-S3 header set for AES-256
+- SSE-KMS keys manged by KMS limitation due to KMS quota
+- SSE-C key provided by the customer.It will never be stored in AWS.https is used
+- encryption at flight is done by HTTPS endpoint.can be forced by securetransport of bucket policy
+- Default encryption is SSE-S3.It can be set via bucket policies using explicit deny when the key string not equals.Pleas note bucket policies are evaluated before default encyrption
 
 ## Lambda
 - virtual functions
