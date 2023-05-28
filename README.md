@@ -228,7 +228,11 @@ version,statement(effect,action,resource,principal)
 - SSE-C key provided by the customer.It will never be stored in AWS.https is used
 - encryption at flight is done by HTTPS endpoint.can be forced by securetransport of bucket policy
 - Default encryption is SSE-S3.It can be set via bucket policies using explicit deny when the key string not equals.Pleas note bucket policies are evaluated before default encyrption
-
+- CORS cross origin resource sharing
+- if a client requests files from other origin,CORS headers has to be set
+- MFA delete uses forces to generate code on MFA hardware device.It will be required for permanent deletion and suspend versioning
+- to enable MFA delete,versioning has to be enabled on the bucketand only root account can do that
+- 
 ## Lambda
 - virtual functions
 - It supports nost languages like java,nodejs,python,go lang
