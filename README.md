@@ -231,8 +231,13 @@ version,statement(effect,action,resource,principal)
 - CORS cross origin resource sharing
 - if a client requests files from other origin,CORS headers has to be set
 - MFA delete uses forces to generate code on MFA hardware device.It will be required for permanent deletion and suspend versioning
-- to enable MFA delete,versioning has to be enabled on the bucketand only root account can do that
-- 
+- to enable MFA delete,versioning has to be enabled on the bucketand only root account can do that and through CLI
+- S3 access logs ,we can enable access logging and configure target bucket
+- S3 presigned URL generates URL only for accessing the file irrespective of permissions.url will get expire via console 1 min to 72o min.CLI 
+- Glacier vault locking write once read many.data rention and compliance
+- S3 object lock rention mode compliance and rention mode governance.legal hold protects the object indefinitely
+- S3 Access points we can define access permissions for the bucket.each access point will have its own dns path
+- for lambda functions to change the object we need not create another s3 bucket .we can use S3 access point and S3 object lambda access point
 ## Lambda
 - virtual functions
 - It supports nost languages like java,nodejs,python,go lang
