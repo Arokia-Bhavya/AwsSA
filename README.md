@@ -320,6 +320,12 @@ version,statement(effect,action,resource,principal)
 - textract extracts text,handwriting,data from scanned documents
 - forcasts fully managed service to provide highly accurate forecast.usecases like financial planning,product planning,resource planning
 
+## VPC
+- Virtual Private Cloud is to protect the network from outside
+- Subnets are to divide the VPC into private and public.for eg:- db servers in private and web servers in public
+- CIDR classless inter domain routing is for defining the IP range
+- Internet Gateway is for connecting from the VPC to internet
+- NAT Gateway is for communication between private and public subnet
 ## White Papers
 - 6 pillars are operational excellence,security,reliability,performance effiency,cost optimization and sustainability
 - AWS Well-Architected Tool (AWS WA Tool) is a service in the cloud that provides a consistent process for measuring your architecture using AWS best practices.
