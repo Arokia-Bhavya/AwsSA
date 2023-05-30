@@ -323,9 +323,12 @@ version,statement(effect,action,resource,principal)
 ## VPC
 - Virtual Private Cloud is to protect the network from outside
 - Subnets are to divide the VPC into private and public.for eg:- db servers in private and web servers in public
-- CIDR classless inter domain routing is for defining the IP range
+- CIDR classless inter domain routing is for defining the IP range(IP and subnet mask)
 - Internet Gateway is for connecting from the VPC to internet
 - NAT Gateway is for communication between private and public subnet
+- soft limit 5 VPCs per region.min size /28 and max size /16 since VPCs are private IP addresses has to be in private range
+- private ranges are 10.0.0.0/8 (big networks),172.16.0.0/12(default VPC),192.168.0.0/16(home networks)
+- 
 ## White Papers
 - 6 pillars are operational excellence,security,reliability,performance effiency,cost optimization and sustainability
 - AWS Well-Architected Tool (AWS WA Tool) is a service in the cloud that provides a consistent process for measuring your architecture using AWS best practices.
