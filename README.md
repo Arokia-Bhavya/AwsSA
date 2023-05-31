@@ -329,10 +329,42 @@ version,statement(effect,action,resource,principal)
 - soft limit 5 VPCs per region.min size /28 and max size /16 since VPCs are private IP addresses has to be in private range
 - private ranges are 10.0.0.0/8 (big networks),172.16.0.0/12(default VPC),192.168.0.0/16(home networks)
 - In a subnet,5 IP address are reserved for eg:- 10.0.0.0/24 10.0.0.1(network address),10.0.0.1(default vpc router),10.0.0.2(amazon provided DNS),10.0.0.3(reserved for AWS future use),10.0.0.255(broadcast)
+- Bastion host is from public subnet to ssh to private subnet for administrative purposes
+- NAT instances from private subnets to connect to internet.must have elastic IP attached to it.NAT instance has to be created from AMI
+- NAT Gateway works for the same puporse but differently.Private subnet->NATGW->IGW.It s restricted to one AZ at a time.
+
+## More Solution Architectures
+- Event processing architectures involves services like SQS,SNS and lambda
+- S3 events can be used with eventbridge to send to different AWS services
+- Cloudfront does caching at frontend,APIGateway too has caching w.r.t region.Lambda,EC2 instance doesnt have caching.
+- DAX,Memcached,Redis are in memory ones
+- NACL has deny rule.security group doesnt have deny but can allow certain IPs.optional firewall installed at instance s feasible as well.
+- Network load balancer doesnt have security group and connection termination
+- ALB + WAF(web application firewall) costly but can filter IPs
+- Highly available Ec2 instanse is possible by creating EC2 instance using elasticIP,cloudwatch metric and lambda
+- EC2 instance+elasticIP+EC2 userdata+ASG as well as EC2 instance+elasticIP+EBS+ASG
+- AWS Direct connect move GB/s of data.Snowball & SnowMobile move PB of data.AWS Datasync move large amount of data between on premise and S3
+- EC2 enhanced networking by ENA upto 100 Gbps and Intel 82599 VF upto 10 Gbps.elastic fabric adapter works for linux only
+- Network storage by S3,EFS,FSx for lustre
+- AWS paralel cluster automate creation of VPC,subnet,cluster,instance types.can enable EFA
+
+## Other Services
+- Cloudformation Template provides infrastructure as a service
+- SES inbound and outbound e-mails.usecases are transactional,marketing and bulk  e-mail communication.
+- Amazon pinpoint 2 way communication like SMS.run campaigns by sending bulk transactional SMS.
+- in SNS and SES application is responsible for message format,delivery and schedule whereas in pinpoint itself s responsible of it
+- SSM session manager allows you to start a secure shell on your EC2 and on premises server.without SSH keys and security group for port 22
+- Run command,Patch Manager,maintenance windows,automation with maintenance and run are other services of SSM 
+- cost explorer visualize,understand,manage AWS costs.Reports like monthly,resource level,savings plan alternatives for reserved instances,forecast 
+- elastic transcoder is used to convert media files stored in S3 into other media formats required by consumer playback devices
+- AWS batch fully managed batch processing at any scale.batch jobs are defined as docker images run on ECS
+- Appflow integration service that enables to transfer data from software as a application and AWS.sources can be servicenow,slack,Zendesk whereas destinations can be amazon S3,redshift.frequency can sceduled or on demand.data transformation like filtering and validation.it canbe encrypted over the public or private link 
+
 ## White Papers
 - 6 pillars are operational excellence,security,reliability,performance effiency,cost optimization and sustainability
 - AWS Well-Architected Tool (AWS WA Tool) is a service in the cloud that provides a consistent process for measuring your architecture using AWS best practices.
 - In addition to AWS best practices, you can use custom lenses to measure your workload using your own best practices.
+- AWS Trusted Advisor provides recommendations that help you follow AWS best practices. It evaluates your account by using checks. These checks identify ways to optimize your AWS infrastructure, improve security and performance, reduce costs, and monitor service quotas.
 
 
 
