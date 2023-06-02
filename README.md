@@ -186,7 +186,15 @@ version,statement(effect,action,resource,principal)
 - Memcached uses SASL
 - Lazy loading,Write through and session store(TTL)
 - Redis sorted sets provides both uniqueness and ordering.usecase is gaming leaderboard
--
+
+## R53
+- AWS Fully managed DNS
+- Each Record contains domain,record type,routing policy,value,TTL
+- record types are A(IPV4),AAAA(IPV6),CNAME(hostname to hostname),NS(name servers of hosted zone)
+- container for records that define how to route traffic.public and private hosted zone
+- creating the domain in AWS will create hosted zone.user has to create records in hosted zone
+- High TTL 24 hr Low TTL 60 secs.mandatory for all records except alias
+- 
 ## S3
 - Storage,archive,Application hosting,media hosting,diaster recovery,data lakes,analytics
 - S3 stores files in buckets.Files are called objects
@@ -238,6 +246,9 @@ version,statement(effect,action,resource,principal)
 - S3 object lock rention mode compliance and rention mode governance.legal hold protects the object indefinitely
 - S3 Access points we can define access permissions for the bucket.each access point will have its own dns path
 - for lambda functions to change the object we need not create another s3 bucket .we can use S3 access point and S3 object lambda access point
+## AWS Storage Extra
+- 
+
 ## Lambda
 - virtual functions
 - It supports nost languages like java,nodejs,python,go lang
