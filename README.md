@@ -202,7 +202,10 @@ version,statement(effect,action,resource,principal)
 - R53 health checks are for public resources they may be another endpoint,monitor other health checks and monitor cloud watch alarm
 - R53 health checkers are outside VPC.they cant access private endpoints.you can create a cloud watch metric and associate cloud watch alarm to it
 - Failover routing policy redirects to secondary when primary s down 
-- georoximity routing policy ability to shift more traffic to resource based on the defined bias
+- geoproximity routing policy ability to shift more traffic to resource based on the defined bias
+- IP based routing policy based on client's IP address.
+- multi value routing policy is not a substitute of ELB
+- If you buy domain name from 3rd party still use them as DNS service provider
 ## S3
 - Storage,archive,Application hosting,media hosting,diaster recovery,data lakes,analytics
 - S3 stores files in buckets.Files are called objects
@@ -254,6 +257,10 @@ version,statement(effect,action,resource,principal)
 - S3 object lock rention mode compliance and rention mode governance.legal hold protects the object indefinitely
 - S3 Access points we can define access permissions for the bucket.each access point will have its own dns path
 - for lambda functions to change the object we need not create another s3 bucket .we can use S3 access point and S3 object lambda access point
+
+## CloudFront
+- Content Delivery Network improves read performance,content is cached at the edge
+- 
 ## AWS Storage Extra
 - 
 
