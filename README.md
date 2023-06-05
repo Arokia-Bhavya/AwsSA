@@ -194,7 +194,15 @@ version,statement(effect,action,resource,principal)
 - container for records that define how to route traffic.public and private hosted zone
 - creating the domain in AWS will create hosted zone.user has to create records in hosted zone
 - High TTL 24 hr Low TTL 60 secs.mandatory for all records except alias
-- 
+- CName record maps hostname with another hostname (works for non root domain)
+- Alias record maps hostname to resource (works for both root and non root domain)
+- Simple routing policy with multi values randomly redirects to the urls provided
+- weighted routing policy redirects to the urls provided based on the percentage
+- latency routing policy redirects to the resource  with least latency
+- R53 health checks are for public resources they may be another endpoint,monitor other health checks and monitor cloud watch alarm
+- R53 health checkers are outside VPC.they cant access private endpoints.you can create a cloud watch metric and associate cloud watch alarm to it
+- Failover routing policy redirects to secondary when primary s down 
+- georoximity routing policy ability to shift more traffic to resource based on the defined bias
 ## S3
 - Storage,archive,Application hosting,media hosting,diaster recovery,data lakes,analytics
 - S3 stores files in buckets.Files are called objects
