@@ -260,6 +260,9 @@ version,statement(effect,action,resource,principal)
 
 ## CloudFront
 - Content Delivery Network improves read performance,content is cached at the edge
+- 216 point of prescence globally
+- DDoS protection (shield,AWS web application firewall)
+- custom origin like ALB,EC2 instance,S3,any HTTP backend
 - 
 ## AWS Storage Extra
 - 
