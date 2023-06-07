@@ -92,6 +92,7 @@ version,statement(effect,action,resource,principal)
 ## AutoScaling Group
 - Scale out,Scale in,automatic registering and dregistering from loadbalancer
 - Launch template containing AMI + instance type,EC2 user data,EBS vloumes,security group,ssh key pair,IAM roles,network subnet info and load balancer
+- Launch configuration is no more supported by AWS.launch template is better than launch configuration due to multi version support.
 - Target tracking,simple step up scaling policy,scheduled actions,Predictive scaling
 - CPU utilization,RequestCountPerTarget,Average network in/out,any custom metric
 - default cool down period is 300s,ASG will not launch or terminate additional instances
@@ -263,7 +264,12 @@ version,statement(effect,action,resource,principal)
 - 216 point of prescence globally
 - DDoS protection (shield,AWS web application firewall)
 - custom origin like ALB,EC2 instance,S3,any HTTP backend
-- 
+- cloudfront works with EC2 or ALB public
+- cloudfront works with S3 with public bucket policy
+- cloudfront works for static content where as S3 cross region replication works for dynamic content
+- AWS global accelerator uses unicast and anycast IP to support global access irrespective of the region application is deployed
+- cloudfront caches at edge locations .it works for specific TTL.inorder to reflect changes immediately cache invalidation s done
+- cache can invalidated by given file path
 ## AWS Storage Extra
 - 
 
