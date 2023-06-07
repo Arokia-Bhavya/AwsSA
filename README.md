@@ -146,6 +146,7 @@ version,statement(effect,action,resource,principal)
 - While creating ECS cluster 3 options like fargate,EC2 instances,external instances using ECS anywhere
 - ECS service to run and maintain a specified number of instances of a task definition simultaneously in an Amazon ECS cluster
 - For automatic scaling we can use ECS service average CPU utilization,ECS service memory utilization,ALB request count per target
+- ECS with EC2 launch type is charged based on EC2 instances and EBS volumes used. ECS with Fargate launch type is charged based on vCPU and memory resources that the containerized application requests
 - architectures example ECS with eventbridge & SQS
 - EKS supports 2 launch modes Fargate and EC2.kubernetes is cloud agnostic
 - EKS Pods in worker nodes.
@@ -225,7 +226,7 @@ version,statement(effect,action,resource,principal)
 - replication can replicate only delete marker not permanently delete
 - S3 standard used for frequent access 
 - S3 standard IA is for infrequent access cost less than standard.use case Diaster Recover and backup.minimum storage 30 days
-- S3 one zone IA infrequent storing secondary backup.minimum storage 30 days
+- S3 one zone IA infrequent storing secondary backup.minimum storage 30 days.cost effective than S3 standard IA
 - S3 Glacier low cost storage for archiving 
 - S3 Glacier instant retrieval is for ms retrievalminimum storage 90 days
 - S3 Glacier Flexible retrieval expedited ( 1 to 5 mins),standard(3 to 5 hrs),bulk(5 to 12hrs).minimum storage 90 days
@@ -233,6 +234,7 @@ version,statement(effect,action,resource,principal)
 - S3 intelligent tiering moves objects based on usage
 - S3 lifecycle are rules that helps to move objects between storage classes based on configured conditions
 - Transition actions are rules for moving and expiration actions are rules for deletion.u can give both current and non current versions
+- While transitioning minimum 30 days duration has to be met by storage class.
 - S3 analytics for analysing the storage class usage with suggestions
 - S3 requester pays networking cost.requester must be IAM user so that billed accordingly
 - S3 event notifications need IAM persmissions
