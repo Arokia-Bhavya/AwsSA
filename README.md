@@ -357,6 +357,17 @@ version,statement(effect,action,resource,principal)
 - textract extracts text,handwriting,data from scanned documents
 - forcasts fully managed service to provide highly accurate forecast.usecases like financial planning,product planning,resource planning
 
+## Security
+- InFlight encryption is done by SSL certificates.encrypted before sending and descrypted after recieving
+- Server side encryption is Encryption at rest by server
+- Client side encryption envelope encryption.encryption decryption happens at client side
+- KMS can manage keys and easily integrate with other AWS services
+- KMS keys are of 2 types symmetric(AES-256) and asymetric(RSA & ECC)
+- KMS keys either of aws owned,aws managed.keys has to be rotated after 1 year
+- They are locked per region.KMS key policy is of 2 types default KMS key policy access by root user
+- custom KMS key policy defines users,roles to access KMS key.useful for cross account access
+- 
+
 ## VPC
 - Virtual Private Cloud is to protect the network from outside
 - Subnets are to divide the VPC into private and public.for eg:- db servers in private and web servers in public
