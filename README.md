@@ -366,7 +366,23 @@ version,statement(effect,action,resource,principal)
 - KMS keys either of aws owned,aws managed.keys has to be rotated after 1 year
 - They are locked per region.KMS key policy is of 2 types default KMS key policy access by root user
 - custom KMS key policy defines users,roles to access KMS key.useful for cross account access
-- 
+- AWS secrets manager for storing and rotation of secrets.supports multi region secrets
+- ACM helps manage TLS certificates.to request public certificates domain names has to be included,automatic renewal of 90 days,validation method of certificates
+- importing of a certificate in ACM requires daily expiration events set before 45 days from expiry.AWS config has managed rule for acm-certification-expiration-check
+- WAF needs fixed IP hence loadbalancer is used woth global accelerator
+- protects web application against common web exploits layer 7.can be deployed in ALB,cloudfront,API gateway
+- set of web ACL rules to protect from SQL injections & cross site scripting
+- AWS shield protects from DDoS attacks
+- Sheild standard is free service can detect attckes using syn/udp pools.
+- Shield advance s chargeable,for sophistacted attacks and 24X7 support from DDoS response team.it automatically deploys WAF to detect layer 7 attacks
+- Firewall manager Manage rules in AWS orgnaization.common security policy
+- WAF for layer7.Shield for DDoS attacks.Firewall manager to set common security rules across organization
+- Best practices are using WAF,shield with cloudfront & global accelerator,R53.
+- infrastructure layer and web applicationlayer defence
+- amaon guarduty to protect aws account usues machine learning algo for detecting unusual events or traffics from logs.good to detect crpto currency attacks
+- amazon inspector automated security assesments for Ec2 instances,container images,lambda.send findings to eventbridge.
+- package vulnerabilities and network reachability
+- Macie is fully managed machine learning to identify and alert about PII information
 
 ## VPC
 - Virtual Private Cloud is to protect the network from outside
