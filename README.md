@@ -365,7 +365,13 @@ version,statement(effect,action,resource,principal)
 - KMS keys are of 2 types symmetric(AES-256) and asymetric(RSA & ECC)
 - KMS keys either of aws owned,aws managed.keys has to be rotated after 1 year
 - They are locked per region.KMS key policy is of 2 types default KMS key policy access by root user
+- KMS multi region are not global.it s managed independently
 - custom KMS key policy defines users,roles to access KMS key.useful for cross account access
+- custom key stores are cloud HSM
+- SSM parameter is secure storage of secrets,version tracking and serverless
+- we can store hierachy wise as well.assign TTL for advanced parameters
+- SSM Parameter types are of 3 types string,stringlist and secure string
+- AWS CloudHSM lets you manage and access your keys on FIPS-validated hardware, protected with customer-owned, single-tenant HSM instances that run in your own Virtual Private Cloud (VPC).
 - AWS secrets manager for storing and rotation of secrets.supports multi region secrets
 - ACM helps manage TLS certificates.to request public certificates domain names has to be included,automatic renewal of 90 days,validation method of certificates
 - importing of a certificate in ACM requires daily expiration events set before 45 days from expiry.AWS config has managed rule for acm-certification-expiration-check
