@@ -403,6 +403,17 @@ version,statement(effect,action,resource,principal)
 - NAT instances from private subnets to connect to internet.must have elastic IP attached to it.NAT instance has to be created from AMI
 - NAT Gateway works for the same puporse but differently.Private subnet->NATGW->IGW.It s restricted to one AZ at a time.
 
+## Diaster Recovery
+- RPO is recovery point objective .recovering the system to the point before diaster happens
+- RTO is recovery time objective.recovering the system to the point after diaster happened
+- backup restore is taking backups from time to time and restoring it when diaster happens
+- pilot light is light version of the app being brought when diaster happens
+- warm standby there s a scaled down but fully functional
+- active active has higher RTO
+- Database Migration Service helps to migrate databases to AWS,resilient and self healing
+- source db->Ec2 instance running DMS->target db
+- 
+
 ## More Solution Architectures
 - Event processing architectures involves services like SQS,SNS and lambda
 - S3 events can be used with eventbridge to send to different AWS services
