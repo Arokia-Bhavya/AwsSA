@@ -408,11 +408,28 @@ version,statement(effect,action,resource,principal)
 - RTO is recovery time objective.recovering the system to the point after diaster happened
 - backup restore is taking backups from time to time and restoring it when diaster happens
 - pilot light is light version of the app being brought when diaster happens
-- warm standby there s a scaled down but fully functional
+- warm standby there s a scaled down but fully functional.when diaster happens scales up immediately
 - active active has higher RTO
 - Database Migration Service helps to migrate databases to AWS,resilient and self healing
 - source db->Ec2 instance running DMS->target db
-- 
+- when source and target db doesnt have same engine.AWS schema conversion tool is used
+- DMS can be deployed in multi AZ
+- migration from mysql RDS to aurora by DB snapshot and setting up aurora replica
+- external RDS  to aurora through percona dump and mysqldump utility
+- we can use DMS if both databases are up
+- migration from postgres RDS to aurora by DB snapshot and setting up aurora replica
+- external RDS  to aurora through backup and aws_s3 extension
+- Onpremise data migration using AWS
+- ability to export/import .iso format,vm export/import,aws directory service and aws data migration service,aws server migration service(incremental replication)
+- AWS backup fully managed service for manage and automate backups across AWS services
+- AWS backup vault lock.write once read many.cannot be deleted as written using vault lock
+- AWS directory service plans migration service either through agentless discovery service or through agent based discovery
+- Resulting data can be viewed with AWS migration hub
+- AWS migration service is the simplest way to migrate application.lift shift application.reduced downtime
+- Transferring large dataset via site to site VPN(185d),over direct connect(18.5d),over snowball(1 wk),ongoing  replication transfers
+- Vmware cloud on AWS helps to migrate the vmware based workloads to AWS,have a disaster recoverage
+- AWS DataSync is a secure, online service that automates and accelerates moving data between on premises and AWS Storage services. DataSync can copy data between Network File System (NFS) shares, Server Message Block (SMB) shares, Hadoop Distributed File Systems (HDFS), self-managed object storage, AWS Snowcone, Amazon Simple Storage Service (Amazon S3) buckets, Amazon Elastic File System (Amazon EFS) file systems, Amazon FSx for Windows File Server file systems, Amazon FSx for Lustre file systems, Amazon FSz for OpenZFS file systems, and Amazon FSx for NetApp ONTAP file systems.
+
 
 ## More Solution Architectures
 - Event processing architectures involves services like SQS,SNS and lambda
