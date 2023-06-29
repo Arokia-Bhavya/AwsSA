@@ -273,7 +273,16 @@ version,statement(effect,action,resource,principal)
 - cloudfront caches at edge locations .it works for specific TTL.inorder to reflect changes immediately cache invalidation s done
 - cache can invalidated by given file path
 ## AWS Storage Extra
-- 
+- Snow Family are offline devices to perform data migrations.more than a week use snowball devices
+- client->AWS Snowball->AWS snowball->import/export->S3 (physical route not network)
+- Snowball edge storage optimised 80 TB of HDD capacity snowball edge compute optimised 42 TB of HDD
+- Snowcone 8TB HDD Snowcone SSD 14TB .data sync agaent preinstalled
+- Snow mobile is the AWS tractor for large data like exabytes
+- we setup snowballedge/snow cone at edge location
+- all can run EC2 instances or lambda functions
+- Historically snow family devices can be used using CLI now AWS OpsHub
+- cannot use snowball to glacier directly.have to use S3 first and S3 lifecycle policy
+- launch 3rd party high performance file systems on AWS
 
 ## Lambda
 - virtual functions
