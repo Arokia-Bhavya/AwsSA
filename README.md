@@ -283,6 +283,26 @@ version,statement(effect,action,resource,principal)
 - Historically snow family devices can be used using CLI now AWS OpsHub
 - cannot use snowball to glacier directly.have to use S3 first and S3 lifecycle policy
 - launch 3rd party high performance file systems on AWS
+- FSx lustre (linux+cluster).distributed file system for large scale computing
+- this s used for machine learning,high performance computing
+- scratch file system used for short term processing,optimse costs.
+- persistent file system used for long term processing,sensitive data
+- FSx for NetApp ONTAP file system compatible with NFS,SMB,iSCSI protocol
+- Point in time instaneous cloning helpful for testing new workloads
+- FSx for OpenZFS compatible with NFS.move workloads to AWS using ZFS
+- bridge between on premises data and AWS cloud data is storage gateway.4 types
+- Server->(NFS,SMB)->S3 File Gateway -> S3 standard,S3 standard IA,S3 one zone IA,S3 intelligent tiering->(lifecycle policy)->Glacier
+- FSx file gateway provides local cache for frequently accessed data.useful for group file shares
+- Volume gateway block storage using iSCSI protocol backed by S3
+- cached volumes low latency access to most recent data
+- stored volumes entire dataset is on premise
+- Tape gateway virtual tape library backed by S3 glacier
+- Storage hardware appliance works with File Gateway,Voulme gateway,Tape gateway
+- transfer family is fully managed service to transfer data to S3 or EFS using FTP protocol
+- supported protocols are SFTP,FTP,FTPS
+- Data sync to move large amount of data onpremises to cloud using agent,from aws service to aws service without agent
+- File permissions and metadata are preserved (NFS POSIX,SMB)
+- NFS/SMB server->datasync agent->datasync->AWS service
 
 ## Lambda
 - virtual functions
