@@ -386,6 +386,18 @@ version,statement(effect,action,resource,principal)
 - textract extracts text,handwriting,data from scanned documents
 - forcasts fully managed service to provide highly accurate forecast.usecases like financial planning,product planning,resource planning
 
+## Cloudwatch,Cloudtrail and Config
+- Cloudwatch logs are not pushed from EC2 by default.either cloudwatch agent is installed on premises or in AWS
+- Amazon event bridge is earlier called as cloudwatch events
+- cron job,event pattern,trigger lambda functions,send SQS/SNS messages
+- archive events and sent to event bus
+- schema registry allows to you to generate code for your application
+- event bridge resource based policy aggregate all events of aws orgnization to single aws account or aws region
+- cloudwatch container insights collect,aggregate,summarize metrics and logs for ECS,EKS,Fargate
+- cloudwatch lambda insights collect,aggregate,summarize metrics and logs for lambda
+- cloudwatch contributor insights for contributor data
+- cloudwatch application insights provides automated dashboard showing potential problems in application
+- 
 ## Security
 - InFlight encryption is done by SSL certificates.encrypted before sending and descrypted after recieving
 - Server side encryption is Encryption at rest by server
