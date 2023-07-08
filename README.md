@@ -16,6 +16,32 @@ version,statement(effect,action,resource,principal)
 - IAM Security Tools 
 - IAM credential report (account) audit user credentials status in account
 - IAM Access Advisor report (user level) audit services accessed by user
+## IAM Advanced
+- AWS Organization helps to manage many accounts
+- consolidated payment method,shared reserved instances & shared savings plan,cross account role
+- Organization Unit can have management account,dev member account & QA member account
+- Service control policies are IAM policies applied to OU or accounts to restrict users and roles
+- SCP has blocklist and allowlist.child account OU scp inherits from root account OU scp
+- aws:SourceIP restrcits client IP from making API calls
+- aws:Requestedregion restrict the region the API calls are making to client
+- aws:ec2Resource Tag resource based on tags
+- aws:multiFactorAuthPresent boolean to check
+- aws s3 policies list bucket will have bucket level permission
+- get,put will have object level permissions
+- resource policies can have principalOrgId
+- accountA accessing S3 bucket in account B in 2 ways cross account role and bucket policy
+- resource based policies are preferred since assigning role gives away all permissions
+- For an eventbridge rule to execute for lambda,S3,SNS,SQS resourced based policies s required whereas for kinesis IAM role s required
+- IAM permission boundaries are for roles and users(not groups)
+- Explixit Deny takes precedence
+- SCP->resource based->Identity based->IAM permission boundary->session policy(STS)
+- AWS identity centre is AWS SSO.one login to multiple AWS
+- users can be IAM identity centre built in identity or 3rd party active directory like OKTA,OneLogin
+- In management account,create roles in IAM identity centre and it can be associated with OU
+- Fine grained permissions and assignments provided by IAM identity centre
+- AWS directory services has 3 flavours like simple AD,AD Connector uses proxy and AWS Managed Microsoft AD establish trust connections with on-prem AD
+- AWS control tower is to setup and govern a secure and multi account AWS environment
+- Guardrails are of 2 types namely preventive guardrail using SCPs,detective guardrail using AWS Config
 
 ## EC2
 - OS,Instace Size & config,Storage,Security Group,Bootstrap
@@ -397,7 +423,16 @@ version,statement(effect,action,resource,principal)
 - cloudwatch lambda insights collect,aggregate,summarize metrics and logs for lambda
 - cloudwatch contributor insights for contributor data
 - cloudwatch application insights provides automated dashboard showing potential problems in application
-- 
+- cloudtrail provides governance,comliance and audit
+- management event,data events,cloudtrail insight events
+- enable cloud trail insights to detect unusual activity in account like inaccurate provisiong,service limits,burst of IAM actions
+- events can be stored in cloudtrail only for 90 days after that it can be moved to S3 and analyzed using athena
+- API logs->cloudtrail->eventbridge->SNS alerts
+- AWS Config Helps with auditing and record compliance of aws resources
+- Config Rules - remidations automate noncompliant resources using SSM automation
+- we can set remediation retries
+- we can use eventbridge or SNS to trigger notifications
+- both aws managed and custom rule can be configured
 ## Security
 - InFlight encryption is done by SSL certificates.encrypted before sending and descrypted after recieving
 - Server side encryption is Encryption at rest by server
