@@ -380,9 +380,11 @@ version,statement(effect,action,resource,principal)
 - Athena is serverless query engine on columnar data
 - redshift is based on postgreSQL.Has indexes .faster queries and results
 - redshift supports multi AZ mode.Cluster snapshots can be taken from region and copied to another
-- Data can be loaded using kinesis firre house,from s3,using Ec2 instance
-- Opensearch successor of elastisearch.can search data across columns irrespective of primary key.
-- Open search patterns using dynamodb streams,kinesis data streams & kinesis firhouse
+- redshift spectrum
+- Data can be loaded using kinesis fire house,from s3,using Ec2 instance
+- Opensearch successor of elastisearch.can search data across columns irrespective of primary key that is partial matches.
+- Opensearch can complement another database.can run on 2 modes managed or serverless
+- Open search patterns using dynamodb streams,kinesis data streams & kinesis firehouse
 - EMR helps to create hadoop clusters.comes with apache spark,flink,hbase,presto
 - Quicksight is ML based BI service providing dashboard
 - Glue is serverless ETL service.convert data to parquet format
@@ -505,7 +507,7 @@ version,statement(effect,action,resource,principal)
 - Transferring large dataset via site to site VPN(185d),over direct connect(18.5d),over snowball(1 wk),ongoing  replication transfers
 - Vmware cloud on AWS helps to migrate the vmware based workloads to AWS,have a disaster recoverage
 - AWS DataSync is a secure, online service that automates and accelerates moving data between on premises and AWS Storage services. DataSync can copy data between Network File System (NFS) shares, Server Message Block (SMB) shares, Hadoop Distributed File Systems (HDFS), self-managed object storage, AWS Snowcone, Amazon Simple Storage Service (Amazon S3) buckets, Amazon Elastic File System (Amazon EFS) file systems, Amazon FSx for Windows File Server file systems, Amazon FSx for Lustre file systems, Amazon FSz for OpenZFS file systems, and Amazon FSx for NetApp ONTAP file systems.
-
+https://aws.amazon.com/datasync/
 
 ## More Solution Architectures
 - Event processing architectures involves services like SQS,SNS and lambda
