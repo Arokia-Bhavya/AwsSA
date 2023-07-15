@@ -480,6 +480,9 @@ version,statement(effect,action,resource,principal)
 - Bastion host is from public subnet to ssh to private subnet for administrative purposes
 - NAT instances from private subnets to connect to internet.must have elastic IP attached to it.NAT instance has to be created from AMI
 - NAT Gateway works for the same puporse but differently.Private subnet->NATGW->IGW.It s restricted to one AZ at a time.
+- NACL are like firewall to subnets
+- NACL rules will take number (1 - 32766) higher precedence with lower number
+- Default NACL accepts everything inbound/outbound
 
 ## Diaster Recovery
 - RPO is recovery point objective .recovering the system to the point before diaster happens
