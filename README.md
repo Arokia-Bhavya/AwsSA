@@ -508,7 +508,10 @@ version,statement(effect,action,resource,principal)
 - Only service which supports IP multicast
 - ECMP  equal cost multipath routing multiple site to site VPN connections via transit gateway increases throughput
 - we can share direct connect connections with multiple accounts via transit gateway
-- 
+- VPC traffic mirroring allows you to capture and inspect the network traffic in vpc usecases are content inspection,threat monitoring and troubleshooting
+- No private in IPV6
+- IPv4 cannot be disabled.they can operate in internal IPv4 and public IPv6
+- In a dual stack mode IPv6,if you cannot launch EC2 instance,create a new IPV4 CIDR
 
 ## Diaster Recovery
 - RPO is recovery point objective .recovering the system to the point before diaster happens
