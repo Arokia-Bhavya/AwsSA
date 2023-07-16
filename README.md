@@ -483,6 +483,14 @@ version,statement(effect,action,resource,principal)
 - NACL are like firewall to subnets
 - NACL rules will take number (1 - 32766) higher precedence with lower number
 - Default NACL accepts everything inbound/outbound
+- Security group operates at instance level NACL operates at subnet level,security group are stateful NACL are stateless.security group allow rules NACL has both allow and deny.all security group groups are considered NACL rules are based on precendence
+- VPC peering is privately connect 2 VPCs of same/cross account.
+- After making the connection,route tables also has to be updated inorder for the ec2 instances to communicate
+- VPC Endpoints allows to connect to AWS services using AWS private network.remove need of IGW or NATGW
+- Types of VPC Endpoints are interface endpoints(uses ENI),gateway endpoints(S3 or Dynamodb)
+- Gateway is most likely to be preferred because it s free and needs updation in route table
+- Interface endpoint is preferred incase of on-premises(Site to Site VPN or DirectConnect),a different VPC or region
+- 
 
 ## Diaster Recovery
 - RPO is recovery point objective .recovering the system to the point before diaster happens
