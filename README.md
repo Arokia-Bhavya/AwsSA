@@ -490,6 +490,8 @@ version,statement(effect,action,resource,principal)
 - Types of VPC Endpoints are interface endpoints(uses ENI),gateway endpoints(S3 or Dynamodb)
 - Gateway is most likely to be preferred because it s free and needs updation in route table
 - Interface endpoint is preferred incase of on-premises(Site to Site VPN or DirectConnect),a different VPC or region
+- VPC Flow logs can be queried using athena on S3 or cloudwatch log insights
+- Troubleshoot SG or NACL issue using action field in VPC flow logs.for eg:-inbound reject SG or NACL,inbound accept outbound reject NACL issue
 - 
 
 ## Diaster Recovery
