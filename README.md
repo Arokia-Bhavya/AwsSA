@@ -492,6 +492,22 @@ version,statement(effect,action,resource,principal)
 - Interface endpoint is preferred incase of on-premises(Site to Site VPN or DirectConnect),a different VPC or region
 - VPC Flow logs can be queried using athena on S3 or cloudwatch log insights
 - Troubleshoot SG or NACL issue using action field in VPC flow logs.for eg:-inbound reject SG or NACL,inbound accept outbound reject NACL issue
+- aws site to site VPN is connecting aws to onpremise through private network
+- aws side of VPN connection is called virtual private gateway
+- customer side of VPN connection is called customer gateway
+- need to enable route propagation and ICMP to be added to security group rules
+- AWS VPN cloud hub model virtual private gateway to multiple customer gateway
+- Direct Connect provides private connection from remote network to VPC
+- use cases such as increased banwidth with large data sets for low cost,consistent network experience for applications using real time data,hybrid environments
+- Direct connections are of 2 types namely dedicated connections (1 Gbps,10 Gbps and 100 Gps)and host connections(50 Mbps,500 Mbps,to 10 Gbps)
+- AWS Direct Connect + VPN provides IP-sec encrypted private connection.good for extra level of security
+- For high resiliency one connection at multiple locations where as for maximum resiliency 2 direct connections per region
+- If a direct connect fails,we can have backup direct connect or site-to-site VPN connect
+- VPCs are connected transitively via transit gateway
+- aws direct connect and VPN connection can also be connected via transit gateway.route tables can limit which VPC to talk
+- Only service which supports IP multicast
+- ECMP  equal cost multipath routing multiple site to site VPN connections via transit gateway increases throughput
+- we can share direct connect connections with multiple accounts via transit gateway
 - 
 
 ## Diaster Recovery
