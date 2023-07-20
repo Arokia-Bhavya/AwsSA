@@ -509,9 +509,19 @@ version,statement(effect,action,resource,principal)
 - ECMP  equal cost multipath routing multiple site to site VPN connections via transit gateway increases throughput
 - we can share direct connect connections with multiple accounts via transit gateway
 - VPC traffic mirroring allows you to capture and inspect the network traffic in vpc usecases are content inspection,threat monitoring and troubleshooting
-- No private in IPV6
+- No private subnets in IPV6
 - IPv4 cannot be disabled.they can operate in internal IPv4 and public IPv6
 - In a dual stack mode IPv6,if you cannot launch EC2 instance,create a new IPV4 CIDR
+- Egress-only internet gateway used for IPv6 only.route tables have to be updated
+- this helps instances in private subnet to intiate connection to internet not vice versa
+- read replica in the same AZ is lesser when compared to read replication in another AZ
+- Ingress traffic s free where as Egress traffic is not
+- S3 Ingress traffic s free but S3 Egress traffic s costly and trasfer acceleration too
+- S3 to cloudfront s free.cloudfront to internet s costly
+- S3 Cross Region Replication s costly since it involves dat movement across regions
+- AWS network firewall is to secure entire VPC
+- internally network firewall uses gateway load balancer.
+- supports 1000s of rules.traffic filtering and active flow of inspection
 
 ## Diaster Recovery
 - RPO is recovery point objective .recovering the system to the point before diaster happens
