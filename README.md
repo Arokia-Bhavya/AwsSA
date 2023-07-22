@@ -204,7 +204,8 @@ version,statement(effect,action,resource,principal)
 - aurora multi master every aurora node is writer one
 - aurora supports cross region read replicas
 - aurora global database is recommended .replication cross region takes less than 1 second
-- aurora ML enables you to add ML based predictions usecases are fraud detection,ads targetting  
+- aurora ML enables you to add ML based predictions usecases are fraud detection,ads targetting
+- single aurora db cluster has 15 read replicas
 
 ### Elasticache
 - Managed redis or memcached
