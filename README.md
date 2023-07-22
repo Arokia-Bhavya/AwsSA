@@ -198,7 +198,13 @@ version,statement(effect,action,resource,principal)
 - proprietary technology and compatible drivers 
 - aws cloud optimized 5X performance improvement over MySQL 3x performance improvement over postgres
 - It s 20% cost more and has features High availability,15 replicas
-- 
+- 6 copies of data across 3 AZ.read replicas support cross region replication
+- custom endpoints to run analytical queries
+- aurora serverless is automated database instiation,good for infrequent workloads and cost effective.proxy fleet will manage aurora
+- aurora multi master every aurora node is writer one
+- aurora supports cross region read replicas
+- aurora global database is recommended .replication cross region takes less than 1 second
+- aurora ML enables you to add ML based predictions usecases are fraud detection,ads targetting  
 
 ### Elasticache
 - Managed redis or memcached
