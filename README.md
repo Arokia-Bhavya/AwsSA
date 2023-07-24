@@ -194,6 +194,12 @@ version,statement(effect,action,resource,principal)
 - 0 downtime from single to multi AZ.Internally snapshot is taken,new DB is restored from snapshot in new AZ and finally sync between the dbs
 - Database authentication are of 3 types.they are password authentication,IAM database authentication and Kerberos authentication
 - RDS custom for Microsoft SQL server and oracle access to underlying OS,can do SSH access
+- RDS Automated backups transaction logs are backed up before 5 mins
+- manual db snapshot s way too less than maintaining RDS db
+- create a backup from on permises percona and restore it
+- no ssh access except RDS custom
+- rds proxy improves database efficiency by reducing the stress on database resources and minimize open connections
+- reduces failover time incase of rds proxy.enforce IAM authentication and securely store credentials in aws secrets manager
 ### Amazon Aurora 
 - proprietary technology and compatible drivers 
 - aws cloud optimized 5X performance improvement over MySQL 3x performance improvement over postgres
@@ -206,6 +212,8 @@ version,statement(effect,action,resource,principal)
 - aurora global database is recommended .replication cross region takes less than 1 second
 - aurora ML enables you to add ML based predictions usecases are fraud detection,ads targetting
 - single aurora db cluster has 15 read replicas
+- create a backup from on permises percona and restore it
+- create new database cluster from running is aurora database cloning faster than copy snapshot.usecase creating staging from prod database
 
 ### Elasticache
 - Managed redis or memcached
