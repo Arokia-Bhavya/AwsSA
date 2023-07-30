@@ -79,6 +79,14 @@ version,statement(effect,action,resource,principal)
 - Fastest Snapshot Restore no latency
 - AMI amazon machine image can be public,custom and market place
 - EC2 instance store provides high performance but they are temporary i3 series 100124 random read IOPS and 35000 write IOPS
+- EBS volumes are of 6 types namely gp1,gp2,io1,io2,st1 and sc1
+- only gp and io are boot volumes
+- GP volumes are cost effective storage,low latency applications.max IOPs are 16000
+- Provisioned IOPs are for applications greater than 16000 IOPs.Great for database workloads
+- Throghput optimized HDD is for BigData,data warehouse and log processing.max IOPs 500
+- cold HDD is for infrequently accessed.max IOPs 250
+- attach the same ebs volume to multiple ec2 instances .higher availability
+- for encrypting unecrpted volume.need to create snapshot->copy the snapshot->enabling encryption->create volume from the new one
 
 ## LoadBalancing
 - Servers that forward traffic to multiple EC2 instance
