@@ -87,6 +87,11 @@ version,statement(effect,action,resource,principal)
 - cold HDD is for infrequently accessed.max IOPs 250
 - attach the same ebs volume to multiple ec2 instances .higher availability
 - for encrypting unecrpted volume.need to create snapshot->copy the snapshot->enabling encryption->create volume from the new one
+- EFS can be implemented only with linux and uses NFS protocol
+- usecases are content management,wordpress.EFS can scale automatically
+- EFS storage classes are standard and infrequent access.can have lifecycle feature
+- EFS one Zone IA s perfect for cost savings
+- EFS supports 100 instances per AZ.EFS has higher price point when compared to EBS
 
 ## LoadBalancing
 - Servers that forward traffic to multiple EC2 instance
